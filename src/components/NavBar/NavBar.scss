@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------------------- */
+/*                               Mobile styles                               */
+/* -------------------------------------------------------------------------- */
+
+.NavBar {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .content-left {
+    img {
+      height: 30px;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Desktop styles                              */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1025px) {
+  .NavBar {
+
+    margin-bottom: 30px;
+
+    .content-rigth {
+      width: 40%;
+
+      .menu-mobile {
+        display: none;
+      }
+
+      .menu-desktop {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          text-decoration: none;
+          color: var(--Neutral_3);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

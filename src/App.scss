@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin: 40px 20px;
+  flex-direction: column;
+}
+
+.App-header {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px){
+  .App{
+    margin: 100px 130px;
+  }
+}

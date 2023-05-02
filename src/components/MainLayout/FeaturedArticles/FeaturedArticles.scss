@@ -1,0 +1,78 @@
+/* -------------------------------------------------------------------------- */
+/*                                Mobile styles                               */
+/* -------------------------------------------------------------------------- */
+
+.FeaturedArticles{
+
+  .featured-card {
+    display: flex;
+    margin-bottom: 35px;
+
+    img {
+      height: 150px;
+    }
+
+    .content-info {
+      padding-left: 25px;
+      text-align: start;
+      
+      >* {
+        margin-bottom: 10px;
+      }
+
+      >h2 {
+        font-size: 32px;
+        color: var(--Neutral_2);
+      }
+
+      >p {
+        line-height: 30px;
+        color: var(--Neutral_3);
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Desktop styles                              */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1025px) {
+
+  .FeaturedArticles {
+    display: flex;
+    flex-direction: row;
+
+    .featured-card {
+
+      img {
+        height: 100px;
+      }
+  
+      .content-info {
+        padding-left: 20px;
+        
+        >* {
+          margin-right: 20px;
+        }
+  
+        >h2 {
+          font-size: 24px;
+        }
+
+        >h3 {
+          font-size: 14px;
+        }
+  
+        >p {
+          font-size: 12px;
+          line-height: 20px;
+          color: var(--Neutral_3);
+        }
+      }
+    }
+  }
+
+  
+  
+}
