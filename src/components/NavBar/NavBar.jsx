@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./NavBar.scss";
 
+
 function NavBar() {
+  const [show, setShow] = useState(false);
+
   return <div className="NavBar">
     <div className="content-left">
-      <img src="/assets/images/logo.svg" alt="" /></div>
+      <img src="/assets/images/logo.svg" alt="" />
+    </div>
     <div className="content-rigth">
-      <div className='menu-mobile'>
-        <img src="/assets/images/icon-menu.svg" alt="" /></div>
-      <div className='menu-desktop'>
-        <a href="">Home</a>
-        <a href="">New</a>
-        <a href="">Popular</a>
-        <a href="">Trending</a>
-        <a href="">Categories</a>
+      <a className='menu-mobile' onClick={() => setShow(true)}>
+        <img src="/assets/images/icon-menu.svg" alt="" />
+      </a>
+      <div className={`menu ${show ? "" : "hidden"} `}>
+        <a className='close-button' onClick={() => setShow(false)}>
+          <img src="/assets/images/icon-menu-close.svg" alt="" />
+        </a>
+        <a>Home</a>
+        <a>New</a>
+        <a>Popular</a>
+        <a>Trending</a>
+        <a>Categories</a>
       </div>
     </div>
   </div>
